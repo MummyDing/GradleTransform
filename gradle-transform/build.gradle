@@ -16,10 +16,14 @@ repositories {
     mavenCentral()
 }
 
+
+group 'com.github.mummyding.plugin'
+version '0.0.1'
+
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: uri("$projectDir/.localMaven"))
+            repository(url: uri("$rootDir/.localMaven"))
         }
     }
 }
