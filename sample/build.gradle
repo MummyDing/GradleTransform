@@ -1,5 +1,19 @@
 apply plugin: 'com.android.application'
+buildscript {
 
+    repositories {
+        maven {
+            url uri("$rootDir/.localMaven")
+        }
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.mummyding.plugin:gradle-transform:0.0.1'
+    }
+}
+apply plugin: 'gradle-transform'
 android {
     compileSdkVersion 28
     defaultConfig {

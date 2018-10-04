@@ -7,6 +7,5 @@ class EntryPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        println(project.name)
     }
 }
